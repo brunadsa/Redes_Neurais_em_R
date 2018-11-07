@@ -21,8 +21,10 @@ sigmoide = function(soma){
 
 for (i in 1:epocas){
   camadaEntrada = entradas
-  somaSinapses0 = camadaEntrada %*% pesos0
-  camadaOculta = sigmoide(somaSinapses0)
+  somaSinapse0 = camadaEntrada %*% pesos0
+  camadaOculta = sigmoide(somaSinapse0)
+  somaSinapse1 = camadaOculta %*% pesos1
+  camadaSaida = sigmoide(somaSinapse1)
 }
 
 
